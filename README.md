@@ -29,7 +29,7 @@
 
 ## 🧐 About <a name = "about"></a>
 
-This project is aimed at the implementation of the HTTP/1.1 Protocol based on RFC 2616 and incorporates the basic HTTP methods of GET, POST, PUT, DELETE and HEAD.
+This project is aimed at the implementation of the HTTP/1.1 Protocol based on RFC 2616 and incorporates the basic `HTTP` methods of `GET`, `POST`, `PUT`, `DELETE` and `HEAD`.
 
 ### Prerequisites
 
@@ -37,17 +37,17 @@ This project is aimed at the implementation of the HTTP/1.1 Protocol based on RF
 
 For installing necessary dependencies before running the project run the following command:
 
-```
-pip3 install -r requirements.txt
+```sh
+$ pip3 install -r requirements.txt
 ```
 
 ### 🏁 Usage <a name = "usage"></a>
 
 Follow the below steps to start the server
 
-```
-cd src
-./start.sh
+```sh
+$ cd src
+$ ./start.sh
 ```
 
 This will start the server on a default port of as mentioned in the configuration file. To specify custom configuration edit the config file in the config/ directory. The following options are available in the config file
@@ -67,16 +67,16 @@ This will start the server on a default port of as mentioned in the configuratio
 Once the server starts, it will start a background process that serves connections from clients.
 To stop the server do the following:
 
-```
-[cd src]
-./stop.sh
+```sh
+$ [cd src]
+$ ./stop.sh
 ```
 
 To restart the server do the following:
 
-```
-[cd src]
-./restart.sh
+```sh
+$ [cd src]
+$ ./restart.sh
 ```
 
 ## 🔧 Running the tests <a name = "tests"></a>
@@ -89,9 +89,9 @@ These tests ensure the conformance of the basic functionalities and the correctn
 
 #### To run unit test module do the following:
 
-```
-[cd src/test/]
-python3 unitTest.py PORT-NO [options]
+```sh
+$ [cd src/test/]
+$ python3 unitTest.py PORT-NO [options]
 ```
 
 ```
@@ -110,7 +110,7 @@ The options specifications for the test module:
 #### To run tests for cookies:
 
 1. Run an instance of the server
-2. Go to a browser and type the url <a>http://localhost:[PORT]/login.html</a>
+2. Go to a browser and type the url `http://localhost:[PORT]/login.html`
 3. The page will simulate a login state management using cookies that expires every 15 seconds.
    <br></br>
    <b>Expected behaviour: </b> Shows the <i>logged out refresh again </i>screen by default. Upon refreshing a new cookie is obtained from the server and is cached locally. For every subsequent request the cookies are sent from the client. Upon expiration the <i>logged out refresh again</i> page will reappear.
@@ -123,17 +123,17 @@ These tests check if the server can handle a large scale pool of network request
 
 #### To run stress test module do the following:
 
-```
-[cd src/test/]
-python3 stressTest.py PORT-NO CONNECTIONS
+```sh
+$ [cd src/test/]
+$ python3 stressTest.py PORT-NO CONNECTIONS
 ```
 
 Example:
 
-```
-python3 stressTest.py 5000 100
+```sh
+$ python3 stressTest.py 5000 100
 
-Tries to send 100 parallel requests to the server listening on port 5000
+$ #Tries to send 100 parallel requests to the server listening on port 5000
 ```
 
 ## ✍️ Logs <a name="log"></a>
